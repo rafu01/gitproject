@@ -8,12 +8,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(),
     );
   }
 }
@@ -28,35 +24,14 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text("my title"),
-            centerTitle: true,
-          ),
-          body: Column(
-            children: [
-              Row(children: [
-                Text(
-                  "1. github ",
-                  style: TextStyle(fontSize: 20),
-                ),
-                Text(
-                  "2.gitbash ",
-                  style: TextStyle(fontSize: 20),
-                ),
-                Text(
-                  "2.gitbash",
-                  style: TextStyle(fontSize: 20),
-                ),
-                Text(
-                  "2.gitbash",
-                  style: TextStyle(fontSize: 20),
-                )
-              ]),
-            ],
-          ),
-        ));
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("my title"),
+        centerTitle: true,
+      ),
+      body: ListView(
+        children: [],
+      ),
+    );
   }
 }
